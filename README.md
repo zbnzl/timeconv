@@ -9,7 +9,7 @@ Package timeconv provides some simple function to convert go time.Time values.
 
 The function `AddDate` in  [package time](https://golang.org/pkg/time/) adds dates passed in format of years, months and days. In the biginning, I thought it did handle different date of month. However, it is NOT.
 
-For example, in many case in real life, if a month is added to 2019-01-31, the result should be 2019-01-28, identifying last day of the month. But the result with `AddDate` in package `time` will be 2019-03-03 ([Playground](https://play.golang.org/p/3eWrvAVzHUm))
+For example, in many case in real life, if a month is added to 2019-01-31, the result should be 2019-02-28, identifying last day of the month. But the result with `AddDate` in package `time` will be 2019-03-03 ([Playground](https://play.golang.org/p/3eWrvAVzHUm))
 
 This simple package `timeconv` provides a simple alternate of `AddDate` function, it focus on month operation and corrects result day for return. Please refer to the demo below for usage:
 
